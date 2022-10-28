@@ -24,7 +24,7 @@ RUN apk add --update --no-cache \
     bash \
     bash-completion \
     bash-doc \
-    gcc musl-dev \
+    gcc alpine-sdk \
     jq \
     coreutils \
     && rm -rf \
