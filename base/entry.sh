@@ -17,9 +17,11 @@ echo apprise $apprisever
 TO_KILL="borgmatic crond"
 graceful_shutdown() {
   for P in $TO_KILL ; do
-    killall -$1 $P
     PIDS=$(pgrep $P)
-    [ -n "$PIDS" ] && wait $PIDS
+    if [ -n "$PIDS" ] ; then
+      killall -$1 $P
+      wait $PIDS
+    fi 
   done
 }
 
