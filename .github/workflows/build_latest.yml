@@ -4,8 +4,6 @@ name: 'Build Docker Images :latest'
 on:
   push:
     branches: [ master ]
-  # pull_request:
-  #   branches: [ $default-branch ]
     
 
 jobs:
