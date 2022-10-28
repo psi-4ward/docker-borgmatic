@@ -24,7 +24,7 @@ RUN apk add --update --no-cache \
     bash \
     bash-completion \
     bash-doc \
-    gcc musle-dev \
+    gcc musl-dev \
     jq \
     coreutils \
     && rm -rf \
