@@ -24,6 +24,8 @@ RUN apk add --update --no-cache \
     bash \
     bash-completion \
     bash-doc \
+    jq \
+    coreutils \
     && rm -rf \
     /var/cache/apk/* \
     /.cache
