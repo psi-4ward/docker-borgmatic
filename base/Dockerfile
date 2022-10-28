@@ -24,6 +24,7 @@ RUN apk add --update --no-cache \
     bash \
     bash-completion \
     bash-doc \
+    gcc \
     jq \
     coreutils \
     && rm -rf \
