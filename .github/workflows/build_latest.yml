@@ -13,22 +13,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Prepare Base Build Metadata | DockerHub
-        id: meta_base_dockerhub
-        uses: docker/metadata-action@v4
-        with:
-          images: |
-            ${{ secrets.DOCKER_USERNAME }}/borgmatic
-          tags: |
-            type=ref,event=branch
-            type=raw,value=latest,enable={{is_default_branch}}
-
       - name: Prepare Base Build Metadata | GHCR
         id: meta_base_ghcr
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/borgmatic-collective/borgmatic
+            ghcr.io/psi-4ward/borgmatic
           tags: |
             type=ref,event=branch
             type=raw,value=latest,enable={{is_default_branch}}
