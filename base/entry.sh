@@ -14,7 +14,7 @@ echo $borgver
 echo apprise $apprisever
 
 # broadcast signals to crond and borgmatic
-TO_KILL="borgmatic crond"
+TO_KILL=${TO_KILL:-"borgmatic crond"}
 graceful_shutdown() {
   for P in $TO_KILL ; do
     PIDS=$(pgrep $P)
